@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Start page</title>
     <style>
         .container-3 a {
             position: relative;
@@ -40,18 +41,18 @@
             transform: scale(1, 1);
         }
     </style>
-    <title></title>
 </head>
 <body>
 <div>
     <th:block th:each="msg : ${messages}">
         <h1 th:text="${msg}"></h1>
     </th:block>
-    <div class="container-3">
-        <h2>
-            <a href="/cars"> к машинам </a>
-        </h2>
-    </div>
+
+</div>
+<div class="container-3">
+    <h2>
+        <a href="/cars"> к машинам </a>
+    </h2>
 </div>
 </body>
 </html>

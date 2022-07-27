@@ -95,10 +95,47 @@
         }</style>
 </head>
 <body>
-<div class="container-3">
-    <h2><a href="/">на главную</a></h2>
+<table>
+    <th>
+    <td>
+        <div class="container-3">
+            <h2><a href="/">|на главную|</a></h2>
 
-</div>
+        </div>
+    </td>
+    <td>
+        <div class="container-3">
+            <h2><a href="/cars?count=1">| жмяк (count1)|</a></h2>
+        </div>
+    </td>
+    <td>
+        <div class="container-3">
+            <h2><a href="/cars?count=2">| жмяк (count2)|</a></h2>
+        </div>
+    </td>
+
+    <td>
+        <div class="container-3">
+            <h2><a href="/cars?count=3">| жмяк (count3)|</a></h2>
+        </div>
+    </td>
+    <td>
+        <div class="container-3">
+            <h2><a href="/cars?count=4">| жмяк (count4)|</a></h2>
+        </div>
+    </td>
+    <td>
+        <div class="container-3">
+            <h2><a href="/cars?count=5">| жмяк (count5)|</a></h2>
+        </div>
+
+    <td>
+        <div class="container-3">
+            <h2><a href="/cars/new">| добавить тачку|</a></h2>
+        </div>
+    </td>
+    </th>
+</table>
 <div class="datagrid">
     <table>
         <thead>
@@ -109,31 +146,42 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="car : ${cars}">
-            <td th:text="${car.getId()}">Cars</td>
-            <td th:text="${car.getModel()}">Cars</td>
-            <td th:text="${car.getSeries()}">Cars</td>
+        <tr th:each="car : ${cars.get(0)}">
+            <td th:text="${car.getId()}"></td>
+            <td th:text="${car.getModel()}"></td>
+            <td th:text="${car.getSeries()}"></td>
         </tr>
-        <tr class="alt">
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
+        <tr class="alt" th:each="car : ${cars.get(1)}">
+            <td th:text="${car.getId()}"></td>
+            <td th:text="${car.getModel()}"></td>
+            <td th:text="${car.getSeries()}"></td>
         </tr>
-        <tr>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
+        <tr th:each="car : ${cars.get(2)}">
+            <td th:text="${car.getId()}"></td>
+            <td th:text="${car.getModel()}"></td>
+            <td th:text="${car.getSeries()}"></td>
         </tr>
-        <tr class="alt">
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
+        <tr class="alt" th:each="car : ${cars.get(3)}">
+            <td th:text="${car.getId()}"></td>
+            <td th:text="${car.getModel()}"></td>
+            <td th:text="${car.getSeries()}"></td>
         </tr>
-        <tr>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
+        <tr th:each="car : ${cars.get(4)}">
+            <td th:text="${car.getId()}"></td>
+            <td th:text="${car.getModel()}"></td>
+            <td th:text="${car.getSeries()}"></td>
         </tr>
+        <tr class="alt" th:each="car : ${cars.get(5)}">
+            <td th:text="${car.getId()}"></td>
+            <td th:text="${car.getModel()}"></td>
+            <td th:text="${car.getSeries()}"></td>
+        </tr>
+        <tr th:each="car : ${cars.get(6)}">
+            <td th:text="${car.getId()}"></td>
+            <td th:text="${car.getModel()}"></td>
+            <td th:text="${car.getSeries()}"></td>
+        </tr>
+
         </tbody>
     </table>
 </div>
